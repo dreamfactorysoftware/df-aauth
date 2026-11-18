@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  df-aauth unit tests. Run bin/test.sh [phpunit args] (the DreamFactory image's PHP plus a PHPUnit 11 phar,
+  in a throwaway container without network).
+  Protocol: pure protocol library tests (src/Protocol), no app bootstrap.
+  Platform: DreamFactory integration tests.
+-->
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/11.5/phpunit.xsd"
+         bootstrap="tests/bootstrap.php"
+         colors="true"
+         cacheDirectory="/tmp/df-aauth-phpunit-cache"
+         executionOrder="default"
+         failOnRisky="true"
+         failOnWarning="true"
+         displayDetailsOnTestsThatTriggerWarnings="true"
+         displayDetailsOnTestsThatTriggerDeprecations="true"
+         displayDetailsOnSkippedTests="true">
+    <testsuites>
+        <testsuite name="Protocol">
+            <directory>tests/Protocol</directory>
+        </testsuite>
+        <testsuite name="Platform">
+            <directory>tests/Platform</directory>
+        </testsuite>
+    </testsuites>
+    <source restrictNotices="true" restrictWarnings="true" ignoreIndirectDeprecations="true">
+        <include>
+            <directory>src</directory>
+        </include>
+    </source>
+    <php>
+        <ini name="error_reporting" value="-1"/>
+        <ini name="memory_limit" value="1G"/>
+        <ini name="error_log" value="/dev/null"/>
+        <env name="APP_ENV" value="testing"/>
+    </php>
+</phpunit>

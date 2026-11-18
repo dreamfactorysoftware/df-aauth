@@ -1,0 +1,65 @@
+{
+  "name": "dreamfactory/df-aauth",
+  "description": "AAuth agent authorization for DreamFactory: AI agents call DreamFactory APIs with signed HTTP requests and person-approved scopes that map onto DreamFactory roles, instead of API keys. Commercial (Gold).",
+  "keywords": [
+    "dreamfactory",
+    "aauth",
+    "agent authorization",
+    "ai agents",
+    "http message signatures",
+    "rfc 9421"
+  ],
+  "homepage": "https://www.dreamfactory.com/",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "DreamFactory Team",
+      "email": "code@dreamfactory.com"
+    }
+  ],
+  "support": {
+    "email": "dspsupport@dreamfactory.com",
+    "source": "https://github.com/dreamfactorysoftware/df-aauth",
+    "issues": "https://github.com/dreamfactorysoftware/df-aauth/issues",
+    "wiki": "https://wiki.dreamfactory.com"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "require": {
+    "php": "^8.3",
+    "ext-curl": "*",
+    "ext-json": "*",
+    "ext-mbstring": "*",
+    "ext-openssl": "*",
+    "ext-sodium": "*",
+    "laravel/helpers": "^1.8",
+    "dreamfactory/df-core": "~1.0.4",
+    "dreamfactory/df-system": "~0.6.2"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^11.5.3"
+  },
+  "suggest": {
+    "dreamfactory/df-masking": "Data Masking treats AAuth agent calls as AI sessions."
+  },
+  "autoload": {
+    "psr-4": {
+      "DreamFactory\\Core\\AAuth\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "DreamFactory\\Core\\AAuth\\Tests\\": "tests/"
+    }
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-develop": "0.1.x-dev"
+    },
+    "laravel": {
+      "providers": [
+        "DreamFactory\\Core\\AAuth\\ServiceProvider"
+      ]
+    }
+  }
+}

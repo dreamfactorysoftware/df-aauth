@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dreamfactory-aauth"
+version = "0.1.0"
+description = "Call AAuth-protected APIs (such as DreamFactory) from Python agents: signed requests, person approval, scoped tokens."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { file = "LICENSE" }
+authors = [{ name = "DreamFactory Team", email = "code@dreamfactory.com" }]
+keywords = ["aauth", "dreamfactory", "ai agents", "http message signatures", "rfc 9421"]
+dependencies = ["requests>=2.25", "cryptography>=3.4"]
+# Private package: this classifier makes PyPI refuse an accidental upload.
+classifiers = ["Private :: Do Not Upload", "License :: Other/Proprietary License", "Programming Language :: Python :: 3"]
+
+[tool.setuptools]
+packages = ["dreamfactory_aauth"]

@@ -1,0 +1,47 @@
+{
+  "description": "A person token signed by the demo signJwt (Ed25519, header alg,typ,kid). Verify at \"now\" with the static key below.",
+  "now": 1794268800,
+  "issuer": "https://ps.example",
+  "dwk": "aauth-person.json",
+  "metadata": {
+    "issuer": "https://ps.example",
+    "jwks_uri": "https://ps.example/jwks.json"
+  },
+  "jwks": {
+    "keys": [
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "x": "oeQy-F-RoU-8IjiC6esX4CPuiLOr4PSxM3OkM8c5VxU",
+        "alg": "Ed25519",
+        "kid": "9kNFp5r3mHs9pIKR"
+      }
+    ]
+  },
+  "jwt": "eyJhbGciOiJFZDI1NTE5IiwidHlwIjoiYWEtcGVyc29uK2p3dCIsImtpZCI6IjlrTkZwNXIzbUhzOXBJS1IifQ.eyJpc3MiOiJodHRwczovL3BzLmV4YW1wbGUiLCJkd2siOiJhYXV0aC1wZXJzb24uanNvbiIsImF1ZCI6Imh0dHBzOi8vZGYuZXhhbXBsZSIsInN1YiI6InBhaXJ3aXNlLWZpeHR1cmUiLCJjbmYiOnsiandrIjp7Imt0eSI6Ik9LUCIsImNydiI6IkVkMjU1MTkiLCJ4IjoiZDNiZHBaTlBmczRUemxCU3kxZVVGbGhSVkQxNnlQU1NGQlJDN2szbHB0VSIsImFsZyI6IkVkMjU1MTkiLCJraWQiOiIzNVRITnYxLWFhcVREVV8tIn19LCJqdGkiOiJVVDVtaVlnUHJCd2pWeEh1bTVHb1p3IiwiaWF0IjoxNzk0MjY4ODAwLCJleHAiOjE3OTQyNzI0MDB9.6I1_sTDvz9cCzblxPWqhXIzu4hDT3fJKKv9bT-XqExy7Z7Peh8SvMkpuBmMBzerg6Uh3J9sqZLMdfx1ri11ECg",
+  "typ": "aa-person+jwt",
+  "header": {
+    "alg": "Ed25519",
+    "typ": "aa-person+jwt",
+    "kid": "9kNFp5r3mHs9pIKR"
+  },
+  "payload": {
+    "iss": "https://ps.example",
+    "dwk": "aauth-person.json",
+    "aud": "https://df.example",
+    "sub": "pairwise-fixture",
+    "cnf": {
+      "jwk": {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "x": "d3bdpZNPfs4TzlBSy1eUFlhRVD16yPSSFBRC7k3lptU",
+        "alg": "Ed25519",
+        "kid": "35THNv1-aaqTDU_-"
+      }
+    },
+    "jti": "UT5miYgPrBwjVxHum5GoZw",
+    "iat": 1794268800,
+    "exp": 1794272400
+  },
+  "cnf_jkt": "35THNv1-aaqTDU_-b6q9ewRbnrFu8DHtZuX2za-oKuw"
+}

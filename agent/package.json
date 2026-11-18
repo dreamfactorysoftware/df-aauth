@@ -1,0 +1,25 @@
+{
+  "name": "@dreamfactory/aauth-agent",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Build AI agents that call DreamFactory APIs with AAuth: signed requests, person approval, scoped tokens. Library, `aauth` CLI and Agent Provider. Zero dependencies.",
+  "keywords": ["aauth", "dreamfactory", "ai agents", "http message signatures", "rfc 9421", "agent auth"],
+  "license": "SEE LICENSE IN LICENSE",
+  "author": "DreamFactory Team <code@dreamfactory.com>",
+  "type": "module",
+  "engines": { "node": ">=20" },
+  "bin": { "aauth": "cli.mjs" },
+  "main": "./aauth.mjs",
+  "exports": {
+    ".": "./aauth.mjs",
+    "./config": "./config.mjs",
+    "./provider": "./provider.mjs",
+    "./person": "./person.mjs",
+    "./package.json": "./package.json"
+  },
+  "files": ["aauth.mjs", "config.mjs", "provider.mjs", "person.mjs", "cli.mjs", "server.mjs", "README.md", "LICENSE"],
+  "scripts": {
+    "test": "node --test",
+    "e2e": "node e2e.mjs"
+  }
+}

@@ -1,0 +1,40 @@
+dreamfactory/df-aauth
+Copyright (c) 2026 DreamFactory Software, Inc. All rights reserved.
+
+This package is commercial software, distributed with the DreamFactory Gold package and licensed
+under the DreamFactory Terms of Use in the LICENSE file.
+
+The agent clients in agent/ (@dreamfactory/aauth-agent) and clients/python/ (dreamfactory-aauth)
+are part of this package and are licensed on the same terms; each carries a copy of LICENSE.
+
+Third-party components
+----------------------
+
+agent/aauth.mjs (the Node client library of the reference agent) is derived from the AAuth
+reference demo, shared/aauth.mjs and agent/netlify/lib/agent.mjs
+(https://github.com/wjgilmore/aauth-demo), which is distributed under the MIT License:
+
+  MIT License
+
+  Copyright (c) 2026 Jason Gilmore
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in all
+  copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  SOFTWARE.
+
+The protocols implemented here are specified in draft-hardt-oauth-aauth-protocol-11 and
+draft-hardt-httpbis-signature-key-09 (IETF Internet-Drafts).

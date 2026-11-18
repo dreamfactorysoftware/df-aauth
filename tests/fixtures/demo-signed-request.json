@@ -1,0 +1,161 @@
+{
+  "description": "Requests signed by the AAuth reference demo (shared/aauth.mjs signedFetch) at a fixed time. Verify with now = \"now\" and a static key resolver built from agent_provider.",
+  "generator": "df-aauth/agent/interop.test.mjs using the aauth-demo shared/aauth.mjs library",
+  "now": 1794268800,
+  "window": 60,
+  "agent_provider": {
+    "issuer": "https://agent.example",
+    "dwk": "aauth-agent.json",
+    "metadata": {
+      "issuer": "https://agent.example",
+      "jwks_uri": "https://agent.example/jwks.json",
+      "name": "Fixture Agent"
+    },
+    "jwks": {
+      "keys": [
+        {
+          "kty": "OKP",
+          "crv": "Ed25519",
+          "x": "9MG0dOZN7govqEPKoeygLeCgrq7YGLZC5Icpuc85Wpc",
+          "alg": "Ed25519",
+          "kid": "erqixABGVajYoEIJ"
+        }
+      ]
+    }
+  },
+  "agent_token": "eyJhbGciOiJFZDI1NTE5IiwidHlwIjoiYWEtYWdlbnQrand0Iiwia2lkIjoiZXJxaXhBQkdWYWpZb0VJSiJ9.eyJpc3MiOiJodHRwczovL2FnZW50LmV4YW1wbGUiLCJkd2siOiJhYXV0aC1hZ2VudC5qc29uIiwic3ViIjoiYWF1dGg6Zml4dHVyZUBhZ2VudC5leGFtcGxlIiwiY25mIjp7Imp3ayI6eyJrdHkiOiJPS1AiLCJjcnYiOiJFZDI1NTE5IiwieCI6ImQzYmRwWk5QZnM0VHpsQlN5MWVVRmxoUlZEMTZ5UFNTRkJSQzdrM2xwdFUiLCJhbGciOiJFZDI1NTE5Iiwia2lkIjoiMzVUSE52MS1hYXFURFVfLSJ9fSwicHMiOiJodHRwczovL3BzLmV4YW1wbGUiLCJqdGkiOiJxb3ZJS1JPcll2QWxGTUpxMEdCbmxRIiwiaWF0IjoxNzk0MjY4ODAwLCJleHAiOjE3OTQyNzI0MDB9.DOSi5SzqEFoNGq9-W6wtkZEo38CuSKxDiRK99-on14y9zGZTaGWHlUr_TL3eu68zQQfamzsZQ1HiW8G_NdcOAA",
+  "agent_token_header": {
+    "alg": "Ed25519",
+    "typ": "aa-agent+jwt",
+    "kid": "erqixABGVajYoEIJ"
+  },
+  "agent_token_claims": {
+    "iss": "https://agent.example",
+    "dwk": "aauth-agent.json",
+    "sub": "aauth:fixture@agent.example",
+    "cnf": {
+      "jwk": {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "x": "d3bdpZNPfs4TzlBSy1eUFlhRVD16yPSSFBRC7k3lptU",
+        "alg": "Ed25519",
+        "kid": "35THNv1-aaqTDU_-"
+      }
+    },
+    "ps": "https://ps.example",
+    "jti": "qovIKROrYvAlFMJq0GBnlQ",
+    "iat": 1794268800,
+    "exp": 1794272400
+  },
+  "agent_public_jwk": {
+    "kty": "OKP",
+    "crv": "Ed25519",
+    "x": "d3bdpZNPfs4TzlBSy1eUFlhRVD16yPSSFBRC7k3lptU",
+    "alg": "Ed25519",
+    "kid": "35THNv1-aaqTDU_-"
+  },
+  "agent_jkt": "35THNv1-aaqTDU_-b6q9ewRbnrFu8DHtZuX2za-oKuw",
+  "request": {
+    "method": "POST",
+    "url": "https://df.example/api/v2/sales/_table/orders",
+    "authority": "df.example",
+    "path": "/api/v2/sales/_table/orders",
+    "query": null,
+    "headers": {
+      "content-digest": "sha-256=:DIpgi8nBuYdq6aTyCkG4qg1rm8wdv/R4Qc8oZBVoBiA=:",
+      "content-type": "application/json",
+      "signature": "sig=:tMawrZ+su92kbKIozkY3QZl4h9TKtEvTo9NfEvc8+iPjcruXoxA6J3b08cYugMWGLc1c3opmwMmdYugSTGtgCg==:",
+      "signature-input": "sig=(\"@method\" \"@authority\" \"@path\" \"signature-key\" \"content-type\" \"content-digest\");created=1794268800",
+      "signature-key": "sig=jwt;jwt=\"eyJhbGciOiJFZDI1NTE5IiwidHlwIjoiYWEtYWdlbnQrand0Iiwia2lkIjoiZXJxaXhBQkdWYWpZb0VJSiJ9.eyJpc3MiOiJodHRwczovL2FnZW50LmV4YW1wbGUiLCJkd2siOiJhYXV0aC1hZ2VudC5qc29uIiwic3ViIjoiYWF1dGg6Zml4dHVyZUBhZ2VudC5leGFtcGxlIiwiY25mIjp7Imp3ayI6eyJrdHkiOiJPS1AiLCJjcnYiOiJFZDI1NTE5IiwieCI6ImQzYmRwWk5QZnM0VHpsQlN5MWVVRmxoUlZEMTZ5UFNTRkJSQzdrM2xwdFUiLCJhbGciOiJFZDI1NTE5Iiwia2lkIjoiMzVUSE52MS1hYXFURFVfLSJ9fSwicHMiOiJodHRwczovL3BzLmV4YW1wbGUiLCJqdGkiOiJxb3ZJS1JPcll2QWxGTUpxMEdCbmxRIiwiaWF0IjoxNzk0MjY4ODAwLCJleHAiOjE3OTQyNzI0MDB9.DOSi5SzqEFoNGq9-W6wtkZEo38CuSKxDiRK99-on14y9zGZTaGWHlUr_TL3eu68zQQfamzsZQ1HiW8G_NdcOAA\""
+    },
+    "body": "{\"resource\":[{\"customer_id\":3,\"total\":42.5,\"status\":\"new\"}]}"
+  },
+  "get_request": {
+    "method": "GET",
+    "url": "https://df.example/api/v2/sales/_table/customers",
+    "authority": "df.example",
+    "path": "/api/v2/sales/_table/customers",
+    "query": null,
+    "headers": {
+      "signature": "sig=:FVkZLdCaWWjnf3roQxwXWdlhGBfLxgWtybRAYkvgZ+pi8fAt20tqLxoPFqrZsjI7wVLsi4SlwRcO6B5j9rqlBQ==:",
+      "signature-input": "sig=(\"@method\" \"@authority\" \"@path\" \"signature-key\");created=1794268800",
+      "signature-key": "sig=jwt;jwt=\"eyJhbGciOiJFZDI1NTE5IiwidHlwIjoiYWEtYWdlbnQrand0Iiwia2lkIjoiZXJxaXhBQkdWYWpZb0VJSiJ9.eyJpc3MiOiJodHRwczovL2FnZW50LmV4YW1wbGUiLCJkd2siOiJhYXV0aC1hZ2VudC5qc29uIiwic3ViIjoiYWF1dGg6Zml4dHVyZUBhZ2VudC5leGFtcGxlIiwiY25mIjp7Imp3ayI6eyJrdHkiOiJPS1AiLCJjcnYiOiJFZDI1NTE5IiwieCI6ImQzYmRwWk5QZnM0VHpsQlN5MWVVRmxoUlZEMTZ5UFNTRkJSQzdrM2xwdFUiLCJhbGciOiJFZDI1NTE5Iiwia2lkIjoiMzVUSE52MS1hYXFURFVfLSJ9fSwicHMiOiJodHRwczovL3BzLmV4YW1wbGUiLCJqdGkiOiJxb3ZJS1JPcll2QWxGTUpxMEdCbmxRIiwiaWF0IjoxNzk0MjY4ODAwLCJleHAiOjE3OTQyNzI0MDB9.DOSi5SzqEFoNGq9-W6wtkZEo38CuSKxDiRK99-on14y9zGZTaGWHlUr_TL3eu68zQQfamzsZQ1HiW8G_NdcOAA\""
+    },
+    "body": ""
+  },
+  "expect": {
+    "valid": true,
+    "typ": "aa-agent+jwt",
+    "created": 1794268800,
+    "components": [
+      "@method",
+      "@authority",
+      "@path",
+      "signature-key",
+      "content-type",
+      "content-digest"
+    ],
+    "get_components": [
+      "@method",
+      "@authority",
+      "@path",
+      "signature-key"
+    ]
+  },
+  "negative": [
+    {
+      "name": "body_tampered",
+      "target": "request",
+      "change": {
+        "body": "{\"resource\":[{\"customer_id\":3,\"total\":99.5,\"status\":\"new\"}]}"
+      },
+      "error": "invalid_signature"
+    },
+    {
+      "name": "authority_changed",
+      "target": "request",
+      "change": {
+        "authority": "df2.example"
+      },
+      "error": "invalid_signature"
+    },
+    {
+      "name": "path_changed",
+      "target": "request",
+      "change": {
+        "path": "/api/v2/sales/_table/customers"
+      },
+      "error": "invalid_signature"
+    },
+    {
+      "name": "method_changed",
+      "target": "get_request",
+      "change": {
+        "method": "DELETE"
+      },
+      "error": "invalid_signature"
+    },
+    {
+      "name": "query_added",
+      "target": "get_request",
+      "change": {
+        "query": "limit=1"
+      },
+      "error": "invalid_input",
+      "require_query": true,
+      "note": "@query is required (requireQuery=true) because the request now has a query, and the signature does not cover it"
+    },
+    {
+      "name": "stale",
+      "target": "request",
+      "now": 1794268920,
+      "error": "invalid_signature"
+    },
+    {
+      "name": "future",
+      "target": "request",
+      "now": 1794268680,
+      "error": "clock_skew"
+    }
+  ]
+}

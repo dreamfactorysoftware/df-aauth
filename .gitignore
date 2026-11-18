@@ -1,0 +1,11 @@
+vendor/
+node_modules/
+phpunit.phar
+.phpunit.cache/
+agent/.keys.json
+agent/.tokens.json
+__pycache__/
+*.pyc
+*.egg-info/
+clients/python/build/
+agent/reference.json
